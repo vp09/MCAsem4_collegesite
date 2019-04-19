@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('welcome/',views.welcome),             #welcome page
+    path('admin/', admin.site.urls),            #admin
+    path('index/',views.index),              #example of hello world
+    path('datetime',views.current_datetime), #for current datetime
+
 ]
